@@ -3,7 +3,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import (path, include)
 from rest_framework.routers import DefaultRouter
-from core import views
+from modules.core import views
 
 routes = DefaultRouter()
 routes.register('users', views.UserViewrSet)

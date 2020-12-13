@@ -25,7 +25,7 @@ SECRET_KEY = '&n1xwg4sl1e5s9a0s&_gx6tsk*973w8@zzhwyj_%sj7edv@hwp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,7 +82,8 @@ WSGI_APPLICATION = 'eroom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # https://stackoverflow.com/questions/64046773/return-database-name-memory-or-mode-memory-in-database-name-typeerror
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -109,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-BR'
 
 TIME_ZONE = 'UTC'
 
