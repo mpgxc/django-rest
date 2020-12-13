@@ -9,3 +9,6 @@ source env/bin/activate
 
 ### Criando um usuário admin
 - python manage.py createsuperuser --email admin@example.com --username admin
+
+### Executando o server
+- python3 manage.py runserver
